@@ -1,3 +1,5 @@
+/* Global CSS */
+
 * {
   font-family: "Lato", sans-serif;
 }
@@ -9,6 +11,10 @@ html {
   background-attachment: fixed;
   min-height: 100vh;
 }
+
+/* Global CSS End */
+
+/* Header CSS */
 
 header {
   position: sticky;
@@ -30,11 +36,60 @@ header {
 .header-links a {
   color: whitesmoke;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .header-links a:hover {
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-shadow: whitesmoke 0px 0px 15px;
-  }
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-shadow: whitesmoke 0px 0px 50px;
+}
+
+/* Header CSS End */
+
+/* Hero CSS */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-image: linear-gradient(-45deg, teal, blueviolet);
+  background-size: cover;
+  background-position: center;
+  border-bottom: #131515 solid 2px;
+  color: whitesmoke;
+  height: 30vh;
+}
+
+figure {
+  display: flex;
+}
+
+.profile-img {
+  width: 150px;
+  height: auto;
+  border-radius: 15px;
+  border: solid 2px #131515;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+}
+
+.hero-text h2 {
+  margin-right: 2rem;
+}
+
+.hero-text p {
+  display: flex;
+  justify-content: center;
+  margin-right: 2rem;
+  padding-top: 8px;
+  font-size: 16px;
+}
+
+/* Hero CSS End */
