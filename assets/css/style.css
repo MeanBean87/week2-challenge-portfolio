@@ -1,22 +1,19 @@
 /* Global CSS */
-
 * {
   font-family: "Lato", sans-serif;
   text-align: center;
 }
 
 html {
-  background-image: url("../images/background.svg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: url("../images/background.svg") fixed center/cover;
   min-height: 100vh;
 }
 
-/* Global CSS End */
+main {
+  padding-top: 2rem;
+}
 
 /* Header CSS */
-
 header {
   position: sticky;
   display: flex;
@@ -32,7 +29,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .header-links a {
@@ -42,23 +39,18 @@ header {
 }
 
 .header-links a:hover {
-  text-decoration: none;
   font-size: 22px;
   text-shadow: whitesmoke 0px 0px 50px;
 }
-
 /* Header CSS End */
 
 /* Hero CSS */
-
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-image: linear-gradient(-45deg, teal, blueviolet);
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(-45deg, teal, blueviolet) center/cover;
   border-bottom: #131515 solid 2px;
   color: whitesmoke;
   height: 30vh;
@@ -69,7 +61,6 @@ figure {
 }
 
 .profile-img {
-  display: block;
   width: 100px;
   height: auto;
   border-radius: 15px;
@@ -79,8 +70,8 @@ figure {
 .hero-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: right;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hero-text h2 {
@@ -89,28 +80,20 @@ figure {
 }
 
 .hero-text p {
-  display: flex;
-  justify-content: center;
   margin-right: 2rem;
   padding-top: 8px;
   font-size: 1.2rem;
 }
-
 /* Hero CSS End */
 
 /* Card CSS */
-
 .card-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .card {
-  display: block;
-  justify-content: center;
-  align-items: center;
   background-color: #131515;
   border-radius: 15px;
   margin: 1rem;
@@ -120,14 +103,11 @@ figure {
   border: solid 2px #131515;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
-
 /* Card CSS End */
 
 /* About-me CSS */
-
 .about-me-title {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   color: whitesmoke;
   font-size: 1.5rem;
   font-weight: bolder;
@@ -137,23 +117,61 @@ figure {
 .about-me-text {
   margin: 1rem;
   color: whitesmoke;
-  align-items: center;
   font-size: .8rem;
   line-height: 1.5rem;
 }
 
 .about-me-img {
-  flex-shrink: 0;
   border-radius: 10px;
   border: solid 2px whitesmoke;
   max-width: 100%;
   height: auto;
 }
+/* About-me CSS End */
 
-/* media queries */
+/* Footer/contact-me CSS */
+#contact-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: whitesmoke;
+  background-color: #131515;
+}
 
+.icons-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .5rem;
+}
+
+#contact-me h3 {
+  font-size: 24px;
+  padding-right: 3rem;
+}
+
+.icon-container img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.icon-container figcaption {
+  font-size: 14px;
+}
+/* Footer/contact-me End */
+
+/* Media queries */
 @media screen and (max-width: 768px) {
-  
   header {
     position: fixed;
     top: 0;
@@ -169,30 +187,27 @@ figure {
   }
 
   .header-links a {
-    color: whitesmoke;
-    text-decoration: none;
     font-size: 16px;
-  }
-  
-  .header-links a:hover {
-    text-decoration: none;
-    font-size: 18px;
   }
 
   .hero {
-    padding-top: 121px;/
+    padding-top: 121px;
+  }
+  
+  .hero-text {
+    align-items: center;
+    text-align: center;
   }
 
   .hero-text h2 {
     font-size: 20px;
   }
-  
+
   .hero-text p {
     font-size: 12px;
   }
 
   .profile-img {
-    display: flex;
     width: 100px;
     border-radius: 15px;
     border: solid 2px #131515;
@@ -202,4 +217,9 @@ figure {
     width: 100%;
   }
 
+  #contact-me h3 {
+    font-size: 20px;
+    padding-right: 2rem;
+  }
 }
+/* Media queries End */
